@@ -4,6 +4,8 @@ function Medical() {
   return (
     <div>
       Medical
+
+      
     </div>
   )
 }

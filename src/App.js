@@ -1,26 +1,27 @@
-import './App.css';
-// import Header from './components/header';
-import SideNavbar from './components/side-navbar';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Home from './pages/Home';
-import Feed from './pages/Feed';
-import Walk from './pages/Walk';
-import Medical from './pages/Medical';
+import "./App.css";
+import Header from "./components/Header";
+import SideNavbar from "./components/side-navbar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Feed from "./pages/Feed";
+import Walk from "./pages/Walk";
+import Medical from "./pages/Medical";
+import Login from "./pages/Login";
 
 function App() {
   return (
     <>
-      {/* <Header/> */}
       <Router>
+        <Header />
         <SideNavbar />
         <Routes>
-        <Route path='/' exact component={Home} />
-          <Route path='/feeding' component={Feed} />
-          <Route path='/walks' component={Walk} />
-          <Route path='/medical' component={Medical} />
+          <Route path="/" exact element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/feeding" element={<Feed />} />
+          <Route path="/walks" element={<Walk />} />
+          <Route path="/medical" element={<Medical />} />
         </Routes>
       </Router>
-      
     </>
   );
 }
