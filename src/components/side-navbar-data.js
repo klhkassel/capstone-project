@@ -22,4 +22,10 @@ export const SideNavbarData = [
         icon: <AiIcons.AiFillHome />,
         cName: 'nav-text'
     },
+    {
+        title: 'Away',
+        path: '/away',
+        icon: <AiIcons.AiFillHome />,
+        cName: 'nav-text'
+    },
 ]

@@ -3,9 +3,10 @@ import './App.css';
 import SideNavbar from './components/side-navbar';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
-import Feed from './pages/Feed';
-import Walk from './pages/Walk';
+import Feeding from './pages/Feeding';
+import Walks from './pages/Walks';
 import Medical from './pages/Medical';
+import Away from './pages/Away';
 
 function App() {
   return (
@@ -14,10 +15,11 @@ function App() {
       <Router>
         <SideNavbar />
         <Routes>
-        <Route path='/' exact component={Home} />
-          <Route path='/feeding' component={Feed} />
-          <Route path='/walks' component={Walk} />
-          <Route path='/medical' component={Medical} />
+          <Route path='/' exact element={<Home />} />
+          <Route path='/feeding' element={<Feeding />} />
+          <Route path='/walks' element={<Walks />} />
+          <Route path='/medical' element={<Medical />} />
+          <Route path='/away' element={<Away />} />
         </Routes>
       </Router>
       
