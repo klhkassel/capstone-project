@@ -5,6 +5,7 @@ import * as AiIcons from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { SideNavbarData } from './side-navbar-data'
 
+
 function SideNavbar() {
     const [sidebar, setSidebar] = useState(false)
 
@@ -35,7 +36,6 @@ function SideNavbar() {
                     })}
                 </ul>
             </nav>
-        Hello
         </div>
     )
 }
