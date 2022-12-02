@@ -1,14 +1,12 @@
-
 import "./App.css";
 import Header from "./components/Header";
 import SideNavbar from "./components/side-navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Feed from "./pages/Feed";
-import Walk from "./pages/Walk";
+import Feed from "./pages/Feeding";
+import Walk from "./pages/Walks";
 import Medical from "./pages/Medical";
 import Login from "./pages/Login";
-
 
 function App() {
   return (
@@ -22,7 +20,6 @@ function App() {
           <Route path="/feeding" element={<Feed />} />
           <Route path="/walks" element={<Walk />} />
           <Route path="/medical" element={<Medical />} />
-
         </Routes>
       </Router>
     </>
