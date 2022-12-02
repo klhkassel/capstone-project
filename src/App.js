@@ -1,3 +1,4 @@
+
 import "./App.css";
 import Header from "./components/Header";
 import SideNavbar from "./components/side-navbar";
@@ -7,6 +8,7 @@ import Feed from "./pages/Feed";
 import Walk from "./pages/Walk";
 import Medical from "./pages/Medical";
 import Login from "./pages/Login";
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
           <Route path="/feeding" element={<Feed />} />
           <Route path="/walks" element={<Walk />} />
           <Route path="/medical" element={<Medical />} />
+
         </Routes>
       </Router>
     </>
