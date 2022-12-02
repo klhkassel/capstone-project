@@ -17,6 +17,10 @@
   font-size: 3rem;
 }
 
+input {
+  width: 450px;
+}
+
 /* .App {
   text-align: center;
 }
