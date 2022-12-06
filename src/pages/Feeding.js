@@ -20,7 +20,7 @@ function Feeding() {
       <AddFeeding addFeedingHandler={addFeedingHandler}/>
       <FeedingHistory feedList={feedList} />
     </div>
-  )
+  );
 }
 
-export default Feeding
+export default Feeding;

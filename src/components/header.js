@@ -1,11 +1,25 @@
 import React from "react";
+import "./Header.css";
+import { Nav, NavLink, NavBtn, NavBtnLink } from "./HeaderElements";
 
-function Header(){
-return(
-    <div>
-        <h1>The Dog Log</h1>
-    </div>
-)
-}
+const Header = () => {
+  return (
+    <>
+      <Nav>
+        <NavLink to="/">
+          <img
+            src={require("../images/logo.jpg")}
+            alt="logo"
+            className="logo"
+          />
+          <h1 className="dog-log">THE DOG LOG</h1>
+        </NavLink>
+        <NavBtn>
+          <NavBtnLink to="/login">Login</NavBtnLink>
+        </NavBtn>
+      </Nav>
+    </>
+  );
+};
 
 export default Header;
