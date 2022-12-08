@@ -7,19 +7,33 @@ class AddFeeding extends React.Component {
         date: ''
     };
     
+    // combo = (e) => {
+    //     e.preventDefault();
+    //     this.add;
+    //     this.generateDate;
+    // }
     add = (e) => {
         e.preventDefault();
-        if (this.state.date ==='' || this.state.user ==='') {
+        if (this.state.dog ==='' || this.state.user ==='') {
             alert('All fields mandatory');
             return;
         }
-        this.props.addFeedingHandler(this.state);
-        this.setState({ date: '', user: ''});
+        let date = new Date(); 
+        let displayDate = date.toLocaleString()
+        console.log(date)               
+        this.setState({date: displayDate.toString()}, () => {
+            this.props.addFeedingHandler(this.state);
+            this.setState({ dog: '', user: ''});
+        })
+        //console.log(this.state)
+        
+        
     }
     
-    // function generateDate(){
+    // generateDate = (e) => {
+    //     e.preventDefault();
     //     let currentTime = new Date();                
-    //     return currentTime;
+    //     this.setState({date: currentTime})
     // };
 
     render() {
@@ -29,12 +43,12 @@ class AddFeeding extends React.Component {
                 <form className='feeding-form' onSubmit={this.add}>
                     <h3>Add Walk</h3>
                     <div className='field'>
-                    <label>Date:</label>
+                    <label>Dog:</label>
                         <input 
                         type='text'
-                        name='date'
-                        value={this.state.date}
-                        onChange={(e) => this.setState({date: e.target.value})}         
+                        name='dog'
+                        value={this.state.dog}
+                        onChange={(e) => this.setState({dog: e.target.value})}         
                         /><br />
                     <label>User:</label>
                     <input 

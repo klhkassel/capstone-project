@@ -1,19 +1,22 @@
 import React from 'react'
+import * as FaIcons from 'react-icons/fa';
 
 function FeedingCard(props) {
   
-    const { dog, user, date } = props.feed;
+    const { id, dog, user, date } = props.feed;
     return (
     <div>
         <div className='item'>
             <div className='content'>
-                <div>Date: {date}</div>
+                <div>Dog: {dog}</div>
                 <div>User: {user}</div>
+                <div>Date: {date}</div>
             </div>
         </div>
-        <i
-            className='delete'
-        ></i>
+        <FaIcons.FaRegTrashAlt
+        style={{ color: "red", marginTop: "7px" }}
+        onClick={() => props.clickHandler(id)} 
+        />
     </div>
   )
 }
