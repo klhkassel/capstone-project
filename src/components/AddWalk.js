@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-class AddFeeding extends React.Component {
+class AddWalk extends React.Component {
     state = {
         dog: '',
         user: '',
@@ -17,16 +17,16 @@ class AddFeeding extends React.Component {
         let displayDate = date.toLocaleString()
         console.log(date)               
         this.setState({date: displayDate.toString()}, () => {
-            this.props.addFeedingHandler(this.state);
+            this.props.addWalkHandler(this.state);
             this.setState({ dog: '', user: ''});
         }) 
     }
     
     render() {
         return (
-            <div className='feeding'>
-                    <h1>Feeding</h1>
-                <form className='feeding-form' onSubmit={this.add}>
+            <div className='walk'>
+                    <h1>Walk</h1>
+                <form className='walk-form' onSubmit={this.add}>
                     <h3>Add Walk</h3>
                     <div className='field'>
                     <label>Dog:</label>
@@ -43,7 +43,7 @@ class AddFeeding extends React.Component {
                         value={this.state.user}
                         onChange={(e) => this.setState({user: e.target.value})}          
                         /><br />
-                    <button>Add Feeding</button>
+                    <button>Add Walk</button>
                     </div>
                 </form>
             </div>
@@ -51,4 +51,4 @@ class AddFeeding extends React.Component {
     }
 }
 
-export default AddFeeding;
+export default AddWalk;
