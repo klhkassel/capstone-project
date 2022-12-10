@@ -10,7 +10,7 @@ import Login from "./pages/Login";
 
 function App() {
   return (
-    <>
+    <div className="app">
       <Router>
         <Header />
         <SideNavbar />
@@ -22,7 +22,7 @@ function App() {
           <Route path="/medical" element={<Medical />} />
         </Routes>
       </Router>
-    </>
+    </div>
   );
 }
 

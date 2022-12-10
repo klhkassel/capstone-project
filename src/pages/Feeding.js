@@ -9,8 +9,13 @@ function Feeding() {
 
   const addFeedingHandler = (feed) => {
     console.log(feed);
-    setFeedList([...feedList, { id: uuid(), ...feed }]);
+    if (feedList.length >= 10) {
+      
+    } else {
+      setFeedList([...feedList, { id: uuid(), ...feed }]);
+    }
   };
+  console.log(feedList);
 
   const removeFeedingHandler = (id) => {
     const newFeedList = feedList.filter((feed) => {
