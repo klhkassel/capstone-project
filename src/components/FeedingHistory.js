@@ -4,9 +4,16 @@ import FeedingCard from './FeedingCard'
 
 function FeedingHistory(props) {
 console.log(props)
+
+    const deleteFeedHandler = (id) => {
+        props.getFeedId(id);
+    }
     const renderFeeding = props.feedList.map((feed) => {
         return (
-            <FeedingCard feed={feed}></FeedingCard>
+            <FeedingCard feed={feed} 
+            clickHandler={deleteFeedHandler}
+            key={feed.id}
+            />
         )
     })
   

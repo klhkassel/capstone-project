@@ -1,9 +1,9 @@
 import React from 'react'
 import * as FaIcons from 'react-icons/fa';
 
-function FeedingCard(props) {
+function WalkCard(props) {
   
-    const { id, dog, user, date } = props.feed;
+    const { id, dog, user, date } = props.walk;
     return (
     <div>
         <div className='item'>
@@ -21,4 +21,4 @@ function FeedingCard(props) {
   )
 }
 
-export default FeedingCard
+export default WalkCard
