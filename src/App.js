@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Feed from "./pages/Feeding";
 import Walk from "./pages/Walks";
-import Medical from "./pages/Medical";
+import Medical from "./pages/medical/Medical";
 import Login from "./pages/Login";
 
 function App() {
